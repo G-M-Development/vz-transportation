@@ -1,0 +1,33 @@
+{% for item in main %}
+<style>
+  .project-item-inner {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url("{{ item.projects_card_background_img_first.url }}");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    transition: background-size 250ms ease-out;
+  }
+</style>
+<section class="projects section">
+  <div class="container">
+    <h2 class="title">{{ item.projects_main_title }}</h2>
+    <ul class="project-list">
+      <li class="project-item">
+        <a class="project-item-inner" href="#">
+          <span class="bg-color"></span>
+          <h3 class="sub-title">{{ item.projects_card_title_first }}</h3>
+          <span class="btn">Click Here</span>
+        </a>
+      </li>
+      <li class="project-item">
+        <a class="project-item-inner" href="#">
+          <span class="bg-color"></span>
+          <h3 class="sub-title">{{ item.projects_card_title_second }}</h3>
+          <span class="btn">Click Here</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+</section>
+{% endfor %}

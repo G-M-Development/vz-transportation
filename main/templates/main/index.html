@@ -1,0 +1,5 @@
+{% extends 'main/layout.html' %} {% load static %} {% block style %}
+<link rel="stylesheet" href="{% static 'main/css/index.css' %}" />
+{% endblock %} {% block title %} {{ title }} {% endblock %} {% block content %} {% include 'main/block/hero.html' %} {%
+include 'main/block/service.html' %} {% include 'main/block/about.html' %} {% include 'main/block/careers.html' %} {%
+include 'main/block/developer.html' %} {% include 'main/block/projects.html' %} {% endblock %}

@@ -1,0 +1,23 @@
+
+{% for item in main %}
+<style>
+  .developer.section {
+  background-image: url("{{ item.development_background_img.url }}");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+</style>
+<section class="developer section">
+  <div class="container">
+    <div class="developer-wrap">
+      <p class="sub-title">{{ item.development_sub_title }}</p>
+      <h2 class="title">{{ item.development_title }}</h2>
+      <p class="text">
+        {{ item.development_text }}
+      </p>
+      <a href="./contact-us.html" class="btn">Get more info</a>
+    </div>
+  </div>
+</section>
+{% endfor %}

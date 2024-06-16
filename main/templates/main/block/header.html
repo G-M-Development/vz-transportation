@@ -1,0 +1,108 @@
+{% load static %}
+
+<aside class="header">
+  <div class="wrapper-header">
+    <a href="/">
+      <img class="header-logo" src="{% static 'main/img/first-logo.png' %}" alt="logo" />
+    </a>
+    <div class="header-burger">
+      <div class="burger" id="burger">
+        <div class="line"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container" id="menu">
+    <div class="header-wrap">
+      <nav class="heder-nav">
+        <ul class="header-nav-list menu">
+          <li class="header-nav-item menu-list">
+            <button class="header-nav-list">
+              <span class="header-nav-btn">Services</span>
+              <svg class="nav-icon" height="9" width="18">
+                <use href="{% static 'main/img/sprite.svg#icon-Vector' %}"></use>
+              </svg>
+            </button>
+            <div class="wrapper">
+              <div class="inner">
+                <ul class="sub-menu-list">
+                  <li>
+                    <a class="header-nav-link" href="./services.html">Point one</a>
+                  </li>
+                  <li>
+                    <a class="header-nav-link" href="./services.html">Point two</a>
+                  </li>
+                  <li>
+                    <a class="header-nav-link" href="./services.html">Point three</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </li>
+          <li class="header-nav-item">
+            <a class="header-nav-link" href="./careers.html">Careers</a>
+          </li>
+          <li class="header-nav-item">
+            <a class="header-nav-link" href="./brokerage.html">Brokerage</a>
+          </li>
+          <li class="header-nav-item">
+            <a class="header-nav-link" href="{% url 'about' %}">About us</a>
+          </li>
+          <li class="header-nav-item">
+            <a class="header-nav-link" href="./contact-us.html">Contact us</a>
+          </li>
+          <li class="header-nav-item menu-list">
+            <button class="header-nav-list">
+              <span class="header-nav-btn">join our team</span>
+              <svg class="nav-icon" height="9" width="18">
+                <use href="../../../static/main/img/sprite.svg#icon-Vector"></use>
+              </svg>
+            </button>
+            <div class="wrapper">
+              <div class="inner">
+                <ul class="sub-menu-list">
+                  <li>
+                    <a class="header-nav-link" href="./owner-operator.html">Application for owner operator</a>
+                  </li>
+                  <li>
+                    <a class="header-nav-link" href="./form-drivers.html">Application for drivers</a>
+                  </li>
+                  <li>
+                    <a class="header-nav-link" href="./form-mechanic.html">Application for Mechanic</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <ul class="header-list-logo">
+      <li>
+        <a href="https://www.facebook.com/" class="social-link">
+          <svg class="header-icon" height="32" width="32">
+            <use href="../img/sprite.svg#icon-facebook"></use>
+          </svg>
+        </a>
+      </li>
+      <li>
+        <a href="/"> <img class="heder-sub-logo" src="../img/second-logo.png" alt="logo" /></a>
+      </li>
+      <li>
+        <a href="/"> <img class="heder-sub-logo" src="../img/third-logo.png" alt="logo" /></a>
+      </li>
+    </ul>
+  </div>
+</aside>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+<script>
+  jQuery(document).ready(() => {
+    $("#burger").on("click", function (e) {
+      $(this).toggleClass("active");
+      $("#menu").toggleClass("active");
+      $("body").toggleClass("hidden");
+    });
+  });
+</script>

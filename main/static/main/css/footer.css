@@ -1,0 +1,28 @@
+.footer {
+  padding: 64px 50px 64px 170px;
+}
+
+.footer.section .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-text {
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 24px;
+  text-align: left;
+  color: var(--text-color);
+}
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 20px 30px;
+  }
+
+  .footer-text {
+    text-align: center;
+  }
+}

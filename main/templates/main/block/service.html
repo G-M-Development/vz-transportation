@@ -1,0 +1,62 @@
+{% for item in main %}
+
+<section class="service section">
+  <div class="container">
+    <div class="service-wrapper">
+      <p class="sub-title">What we offer</p>
+      <h2 class="title">Services</h2>
+    </div>
+    <ul class="service-list">
+
+<!--    
+      <li class="service-item">
+        <img src="{{ item.service_card_img }}" alt="A man and a woman talk between trucks" class="service-img" />
+        <div class="service-wrap">
+          <h3 class="sub-title">{{ item.service_card_title }}</h3>
+          <p class="text">
+            {{ item.service_card_text }}
+          </p>
+        </div>
+      </li> -->
+
+      <li class="service-item">
+        <img src="{{  item.service_img_first.url }}" alt=" Trucks" class="service-img" />
+
+        <div class="service-wrap">
+          <h3 class="sub-title">Hauling loads on open decks trailers</h3>
+          <p class="text">
+            machinery, steel, pipes, coils, building materials, and many more
+          </p>
+        </div>
+      </li>
+      <li class="service-item">
+        <img src="{{ item.service_img_second.url }}" alt="A man repairs a truck" class="service-img" />
+        <div class="service-wrap">
+          <h3 class="sub-title">Hauling loads on open decks trailers</h3>
+          <p class="text">
+            machinery, steel, pipes, coils, building materials, and many more
+          </p>
+        </div>
+      </li>
+      <li class="service-item">
+        <img src="{{ item.service_img_three.url }}" alt="A man and a woman talk between trucks" class="service-img" />
+        <div class="service-wrap">
+          <h3 class="sub-title">Hauling loads on open decks trailers</h3>
+          <p class="text">
+            machinery, steel, pipes, coils, building materials, and many more
+          </p>
+        </div>
+      </li>
+      <li class="service-item">
+        <img src="{{ item.service_img_fourth.url }}" alt="Trucks" class="service-img" />
+        <div class="service-wrap">
+          <h3 class="sub-title">Hauling loads on open decks trailers</h3>
+          <p class="text">
+            machinery, steel, pipes, coils, building materials, and many more
+          </p>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
+{% endfor %}

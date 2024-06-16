@@ -1,0 +1,26 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="{% static 'main/img/favicon.svg' %}" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
+      integrity="sha512-wpPYUAdjBVSE4KJnH1VR1HeZfpl1ub8YT/NKx4PuQ5NmX2tKuGu6U/JRp5y+Y8XG2tV+wKQpNHVUX03MfMFn9Q=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="{% static 'main/css/main.css' %}" />
+    {% block style %}{% endblock %}
+    <title>{% block title %}{% endblock %}</title>
+  </head>
+  <body>
+    <div class="body-wrapper">
+      {% include 'main/block/header.html' %} {% block content %} {% endblock %} {% include 'main/block/footer.html' %}
+    </div>
+    <script type="module" src=""></script>
+  </body>
+</html>

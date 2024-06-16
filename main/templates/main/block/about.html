@@ -1,0 +1,25 @@
+{% for item in main %}
+<section class="about section">
+  <div class="container">
+    <div class="about-wrap">
+      <span class="sub-title">{{ item.about_sub_title }}</span>
+      <h2 class="title">{{ item.about_title }}</h2>
+
+      <p class="paragraph">
+        <span class="text">{{ item.about_text }}</span>
+      </p>
+    </div>
+
+    <ul class="about-list">
+      <il class="about-item"
+        ><img src="{{ item.about_img_first.url }}" alt="{{ item.about_title }}" class="about-img"
+      /></il>
+
+      <il class="about-item"><img src="{{ item.about_img_second.url }}" alt="Employee" class="about-img" /></il>
+      <il class="about-item"><img src="{{ item.about_img_third.url }}" alt="Employee" class="about-img" /></il>
+      <il class="about-item"><img src="{{ item.about_img_fourth.url }}" alt="Employee" class="about-img" /></il>
+    </ul>
+    <button class="about-btn btn" onclick="window.location.href='./about.html'">read more</button>
+  </div>
+</section>
+{% endfor %}

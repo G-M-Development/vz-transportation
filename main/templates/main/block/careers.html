@@ -1,0 +1,70 @@
+{% for item in main %}
+<style>
+.careers .careers-background {
+  background-image: url('{{ item.careers_background_img.url }}');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+</style>
+<section class="careers section">
+  <div class="careers-background">
+    <div class="container">
+      <div class="careers-wrap">
+        <span class="sub-title">{{ item.careers_sub_title }}</span>
+        <h2 class="title">{{ item.careers_title }}</h2>
+        <p class="text">
+          {{ item.careers_text }}
+        </p>
+        <button class="btn" onclick="window.location.href='./contact-us.html'">
+          CONTACT US
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="container card-container">
+    <ul class="careers-list">
+      <li class="careers-item">
+        <a href="./form-drivers.html" class="careers-link">
+          <span class="careers-text">
+            <span class="careers-span">Become </span>
+            <span class="careers-span">truck Driver</span>
+          </span>
+          <img
+            src="{{ item.careers_card_img_first.url }}"
+            alt="{{ item.careers_description_first }}"
+            class="career-img"
+          />
+        </a>
+      </li>
+      <li class="careers-item">
+        <a href="./owner-operator.html" class="careers-link">
+          <span class="careers-text">
+            <span class="careers-span">Become </span>
+            <span class="careers-span">owner operators</span>
+          </span>
+          <img
+            src="{{ item.careers_card_img_second.url }}"
+            alt="{{ item.careers_description_second }}"
+            class="career-img"
+          />
+        </a>
+      </li>
+      <li class="careers-item">
+        <a href="/form-mechanic.html" class="careers-link">
+          <span class="careers-text">
+            <span class="careers-span">Become </span>
+            <span class="careers-span">full-time truck mechanic </span>
+          </span>
+          <img
+            src="{{ item.careers_card_img_third.url }}"
+            alt="{{ item.careers_description_third }}"
+            class="career-img"
+          />
+        </a>
+      </li>
+    </ul>
+  </div>
+</section>
+
+{% endfor %}

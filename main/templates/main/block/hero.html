@@ -1,0 +1,40 @@
+{% for item in main %}
+<style>.hero .hero-background {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+  url('{{ item.main_background_img.url }}');
+  background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;}
+</style>
+<section class="hero section">
+  <div class="hero-background">
+    <h1 class="hero-title title">
+        {{ item.main_title }}<br>
+      {% endfor %}
+    </h1>
+  </div>
+  <div class="container">
+    <ul class="hero-list">
+      {% for item in main %}
+      <li class="hero-item">
+        <h2 class="sub-title">{{ item.main_card_title_first }}</h2>
+        <p class="text">
+          {{ item.main_card_text_first }}
+        </p>
+      </li>
+      <li class="hero-item">
+        <h2 class="sub-title">{{ item.main_card_title_second }}</h2>
+        <p class="text">
+          {{ item.main_card_text_second }}
+        </p>
+      </li>
+      <li class="hero-item">
+        <h2 class="sub-title">{{ item.main_card_title_three }}</h2>
+        <p class="text">
+          {{ item.main_card_text_three }}
+        </p>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>
