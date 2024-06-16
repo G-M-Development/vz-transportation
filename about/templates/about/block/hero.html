@@ -1,74 +1,51 @@
+{% for el in about_hero %}
+<style>
+.about-hero .about-hero-background {
+  background-image: url('{{ el.main_background_img.url }}');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+}
+</style>
 <section class="about-hero section">
   <div class="about-hero-background">
     <div class="about-hero-description">
-      <h1 class="title">About us</h1>
+      <h1 class="title">{{ el.main_title }}</h1>
       <ul class="about-list-text">
         <li class="about-item-text">
           <p class="text">
-            V Z TRANSPORTATION Trucking Inc was established in 2013 when 23
-            years old Vadym Zelenko and Alexandra Zelenko found that trucking is
-            his passion.
+           {{ el.main_text }}
           </p>
         </li>
-        <li class="about-item-text">
+        <!-- <li class="about-item-text">
           <p class="text">
             A young emigrant tried himself in the restaurant and construction
             industry, which wasn’t his thing, and then he finally got his CDL,
             and from day 1 he fell in love with trucking, especially in an open
             deck, heavy haul industry.
           </p>
-        </li>
+        </li> -->
       </ul>
     </div>
   </div>
+  {% endfor %}
   <div class="container-wrapper">
     <div class="container">
       <ul class="about-list">
+        {% for el in hero_card %}
         <li class="about-item">
           <p class="about-hero-text">
             <span class="text"
-              >1st driver was hired in 2014 by Vadym, and that’s how the story
-              began. After 10 years company got more than *60 trucks and *70
-              trailers.</span
-            >
-            <span class="text"
-              >In 2021 V Z TRANSPORTATION Trucking Inc. (Vadym Zelenko and
-              Alexandra Zelenko) decided to move to a new, beautiful building in
-              Kyiv.</span
-            >
-          </p>
-
-          <img
-            src="../../../img/about-image-first.jpg"
+              >{{ el.card_text }}</span
+            ></p>
+           <img
+            src="{{  el.card_img.url }}"
             alt=""
             class="about-img"
           />
         </li>
-        <li class="about-item">
-          <img
-            src="../../../img/about-image-second.jpg"
-            alt=""
-            class="about-img"
-          />
-          <p class="about-hero-text">
-            <span class="text"
-              >Thanks to G&M developer, we can ensure a higher level of
-              reliability and safety for our transportation, allowing us to meet
-              the needs of our customers and drivers while reducing the number
-              of accidents and delays in our operations.</span
-            >
-            <span class="text"
-              >Every day we analyze our work, improving and doing our 100% to be
-              the best.</span
-            >
-            <span class="text"
-              >We built a great team and excellent reputation, and we truly
-              believe that V Z TRANSPORTATION. Trucking Inc is the best place
-              for work with the best atmosphere .</span
-            >
-          </p>
-        </li>
-      </ul>
+      {% endfor %}
+             </ul>
     </div>
   </div>
 </section>

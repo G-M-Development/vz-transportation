@@ -1,4 +1,11 @@
-{% extends 'main/layout.html'%} {% load static %} {% block style %}
-<link rel="stylesheet" href="{% static 'main/css/index.css' %}" />
-{% endblock %} {% block title %} About {% endblock %} {% block content %} {% include 'about/block/hero.html' %} {%
-include 'about/block/team.html' %} {% include 'about/block/company-info.html' %} {% endblock %}
+{% extends 'main/layout.html'%} 
+{% load static %}
+{% block style %}
+<link rel="stylesheet" href="{% static 'about/css/index.css' %}" />
+{% endblock %} 
+{% block title %} About {% endblock %}
+ {% block content %} 
+ {% include 'about/block/hero.html' %} 
+ {% include 'about/block/team.html' %}
+ {% include 'about/block/company-info.html' %}
+ {% endblock %}

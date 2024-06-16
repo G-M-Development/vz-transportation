@@ -1,95 +1,23 @@
 <section class="about-team section">
   <div class="container">
-    <h2 class="title">OUR TEAM</h2>
+    {% for el in about_teem %}
+    <h2 class="title">{{ el.teem_title }}</h2>
+    {% endfor %}
     <ul class="team-list">
+      {% for el in about_card_teem %}
       <li class="team-item">
         <img
-          src="../../../img/team-list.png"
+          src="{{ el.card_img.url }}"
           alt="Dispatcher Roman"
           class="team-img"
         />
         <div class="text-container">
-          <h3 class="sub-title">Roman</h3>
-          <p class="text">Dispacther</p>
+          <h3 class="sub-title">{{ el.card_name }}</h3>
+          <p class="text">{{ el.card_position }}</p>
         </div>
       </li>
-      <li class="team-item">
-        <img
-          src="../../../img/team-list.png"
-          alt="Dispatcher Roman"
-          class="team-img"
-        />
-        <div class="text-container">
-          <h3 class="sub-title">Roman</h3>
-          <p class="text">Dispacther</p>
-        </div>
-      </li>
-      <li class="team-item">
-        <img
-          src="../../../img/team-list.png"
-          alt="Dispatcher Roman"
-          class="team-img"
-        />
-        <div class="text-container">
-          <h3 class="sub-title">Roman</h3>
-          <p class="text">Dispacther</p>
-        </div>
-      </li>
-      <li class="team-item">
-        <img
-          src="../../../img/team-list.png"
-          alt="Dispatcher Roman"
-          class="team-img"
-        />
-        <div class="text-container">
-          <h3 class="sub-title">Roman</h3>
-          <p class="text">Dispacther</p>
-        </div>
-      </li>
-      <li class="team-item">
-        <img
-          src="../../../img/team-list.png"
-          alt="Dispatcher Roman"
-          class="team-img"
-        />
-        <div class="text-container">
-          <h3 class="sub-title">Roman</h3>
-          <p class="text">Dispacther</p>
-        </div>
-      </li>
-      <li class="team-item">
-        <img
-          src="../../../img/team-list.png"
-          alt="Dispatcher Roman"
-          class="team-img"
-        />
-        <div class="text-container">
-          <h3 class="sub-title">Roman</h3>
-          <p class="text">Dispacther</p>
-        </div>
-      </li>
-      <li class="team-item">
-        <img
-          src="../../../img/team-list.png"
-          alt="Dispatcher Roman"
-          class="team-img"
-        />
-        <div class="text-container">
-          <h3 class="sub-title">Roman</h3>
-          <p class="text">Dispacther</p>
-        </div>
-      </li>
-      <li class="team-item">
-        <img
-          src="../../../img/team-list.png"
-          alt="Dispatcher Roman"
-          class="team-img"
-        />
-        <div class="text-container">
-          <h3 class="sub-title">Roman</h3>
-          <p class="text">Dispacther</p>
-        </div>
-      </li>
+      {% endfor %}
+   
     </ul>
   </div>
 </section>
