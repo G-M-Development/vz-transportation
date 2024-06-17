@@ -1,0 +1,77 @@
+{% extends 'main/layout.html' %}
+ {% load static %} 
+ {% block style %}
+ <link rel="stylesheet" href="{% static 'services/services.css' %}" />
+
+{% endblock %}
+{% block title %} {{ title }} {% endblock %}
+{% block content %}
+{% for el in services %}
+<style>
+   @media (max-width: 768px) {
+    .services-hero {
+      background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+        url('{{ el.img.url }}');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+    }}
+</style>
+<section class="services-hero section">
+    <div class="container">
+      <img
+        class="services-hero-img"
+        src="{{ el.img.url }}"
+        alt=""
+      />
+      <div class="services-here-wrap">
+        <h1 class="title">{{ el.title }}</h1>
+        <p class="text text-hero">
+          {{ el.sub_title }}
+        </p>
+        {% endfor %}
+        <ul class="services-hero-list">
+          {% for el in text %}
+          <li class="services-hero-item">
+            <p class="text">{{ el.text }}</p>
+          </li>  {% endfor %}
+          <!-- <li class="services-hero-item">
+            <p class="text">
+              Use reliable and well-maintained equipment: we invest in quality
+              trucks and trailers that are regularly serviced and maintained to
+              ensure they are in good condition for hauling loads.
+            </p>
+          </li>
+          <li class="services-hero-item">
+            <p class="text">
+              Implement safety protocols: we have strict safety policies in place
+              to ensure the safety of both customers and drivers.
+            </p>
+          </li>
+          <li class="services-hero-item">
+            <p class="text">
+              Provide competitive rates: we offer fair rates that are competitive
+              with other transportation companies.
+            </p>
+          </li>
+          <li class="services-hero-item">
+            <p class="text">
+              We offer flexible and efficient services: we offer customized
+              services that meet each customer’s specific needs.
+            </p>
+          </li>
+          <li class="services-hero-item">
+            <p class="text">
+              Communicate effectively: we provide regular updates to customers and
+              owner- operators.
+            </p>
+          </li> -->
+        </ul>
+        <button class="btn" onclick="window.location.href='./contact-us.html'">
+          CONTACT US
+        </button>
+      </div>
+    </div>
+  </section>
+  
+{% endblock %}

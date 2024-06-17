@@ -1,0 +1,82 @@
+{% extends 'main/layout.html' %} {% load static %} {% block style %}
+<link rel="stylesheet" href="{% static 'contact/contact.css' %}" />
+{% endblock %} {% block title %} CONTACT US {% endblock %} {% block content %} {% for el in contact %}
+<section class="contact-us section">
+  <div class="container">
+    <h2 class="title">{{ el.main_title }}</h2>
+    <div class="contact-us-wrap">
+      <div class="contact-us-wrap-contact">
+        <h3 class="contact-us-title sub-title">{{el.title}}</h3>
+        <ul class="contact-us-list-link">
+          <li class="contact-us-item">
+            <a class="contact-us-link" href="tel:{{el.phone_link}}">
+              <img src="{% static 'main/img/phone.png'  %}" class="contact-us-icon" width="14" height="14" />
+
+              {{el.phone}}
+            </a>
+          </li>
+          <li class="contact-us-item-link">
+            <a class="contact-us-link" href="{{el.email_link}}">
+              <img src="{% static 'main/img/email.png'  %}" class="contact-us-icon" width="14" height="14" />
+
+              {{el.email}}
+            </a>
+          </li>
+
+          <li class="contact-us-item">
+            <a class="contact-us-link" href="{{el.location_link}}">
+              <img src="{% static 'main/img/locatio.png' %}" class="contact-us-icon" width="11" height="14" />
+
+              {{el.location}}
+            </a>
+          </li>
+        </ul>
+        <ul class="contact-us-social-list">
+          <li class="contact-us-social-item">
+            <a href="{{el.facebook}}">
+              <img src="{% static 'main/img/facebook.png' %}" class="contact-us-social-icon" width="32" height="32" />
+            </a>
+          </li>
+          <li class="contact-us-social-item">
+            <a href="{{el.instagram}}">
+              <img src="{% static 'main/img/instagram.png' %}" class="contact-us-social-icon" width="32" height="32" />
+            </a>
+          </li>
+        </ul>
+      </div>
+      {% endfor %}
+      <form class="contact-us-form" id="contact-us-form">
+        {% for el in contact %}
+        <h3 class="contact-us-title sub-title">{{el.form_title}}</h3>
+        {% endfor %}
+        <label class="label">
+          <input class="input" type="text" id="name" placeholder="" />
+          <span class="label-span">Name</span>
+        </label>
+
+        <label class="label">
+          <input class="input" type="email" id="email" placeholder="" />
+          <span class="label-span">Email</span>
+        </label>
+
+        <textarea class="contact-us-textarea" name="comment" id="comment"></textarea>
+
+        <button type="submit" class="btn">SEND</button>
+      </form>
+    </div>
+    {% for el in contact %}
+    <iframe
+      class="contact-us-iframe"
+      src="{{el.iframe}}"
+      width="1260"
+      height="500"
+      style="border: 0"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"
+    ></iframe
+    >{%endfor%}
+  </div>
+</section>
+
+{% endblock %}

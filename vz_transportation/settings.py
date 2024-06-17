@@ -34,6 +34,9 @@ APPEND_SLASH = False
 # Application definition
 
 INSTALLED_APPS = [
+    'contact',
+    'services',
+    'brokerage',
     'main',
     'about',
     'django.contrib.admin',
