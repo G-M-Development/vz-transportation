@@ -27,14 +27,14 @@
               <div class="inner">
                 <ul class="sub-menu-list">
                   <li>
-                    <a class="header-nav-link" href="./services.html">Point one</a>
+                    <a class="header-nav-link" href="{% url 'services' %}">Point one</a>
                   </li>
                   <li>
-                    <a class="header-nav-link" href="./services.html">Point two</a>
+                    <a class="header-nav-link" href="{% url 'services' %}">Point two</a>
                   </li>
                   <li>
-                    <a class="header-nav-link" href="./services.html">Point three</a>
-                  </li>
+                    <a class="header-nav-link" href="{% url 'services' %}">Point three</a>
+                  </li> 
                 </ul>
               </div>
             </div>
@@ -43,13 +43,13 @@
             <a class="header-nav-link" href="./careers.html">Careers</a>
           </li>
           <li class="header-nav-item">
-            <a class="header-nav-link" href="./brokerage.html">Brokerage</a>
+            <a class="header-nav-link" href="{% url 'brokerage' %}">Brokerage</a>
           </li>
           <li class="header-nav-item">
             <a class="header-nav-link" href="{% url 'about' %}">About us</a>
           </li>
           <li class="header-nav-item">
-            <a class="header-nav-link" href="./contact-us.html">Contact us</a>
+            <a class="header-nav-link" href="{% url 'contact' %}">Contact us</a>
           </li>
           <li class="header-nav-item menu-list">
             <button class="header-nav-list">
