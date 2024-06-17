@@ -189,6 +189,9 @@ main {
   border: 2px solid red;
 }
 
+
+
+
 @media (max-width: 768px) {
   .container {
     max-width: 475px;

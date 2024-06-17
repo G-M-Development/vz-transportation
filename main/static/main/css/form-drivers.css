@@ -1,0 +1,117 @@
+.drivers.section {
+    padding: 68px 315px 30px 145px;
+  }
+  .drivers .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .drivers .title {
+    font-size: 64px;
+    font-weight: 600;
+    line-height: 100.8px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .drivers .text {
+    width: 540px;
+    text-align: center;
+    margin-top: 11px;
+  }
+  .drivers .sub-title {
+    font-size: 15.5px;
+    font-weight: 600;
+    line-height: 16px;
+    text-align: left;
+    margin-top: 43px;
+    width: 428px;
+  }
+  .form-drivers-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 11px;
+    width: 428px;
+    margin-top: 21px;
+  }
+  .drivers .form-drivers-form .btn {
+    background: var(--fill-icon);
+    color: var(--text-color);
+    width: 100%;
+    margin-top: 32px;
+  }
+  /* Date */
+.ui-datepicker,
+.ui-datepicker-header,
+.ui-datepicker-week-end,
+.ui-datepicker-calendar,
+.ui-state-default,
+.ui-state-default,
+.ui-widget-content .ui-state-default,
+.ui-widget-header .ui-state-default,
+.ui-button {
+  background: var(--background-body);
+  border: 1px solid #111111;
+}
+
+html .ui-button.ui-state-disabled:hover,
+html .ui-button.ui-state-disabled:active {
+  border: 1px solid #1a1a1a;
+  background: #b3b3b3;
+  font-weight: normal;
+  color: #a3a3a3;
+}
+.ui-datepicker-next.ui-corner-all:hover,
+.ui-datepicker-prev.ui-corner-all:hover {
+  background-color: #161616;
+
+  border-color: #161616;
+
+  color: #fff;
+}
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default, .ui-button, html .ui-button.ui-state-disabled:hover, html .ui-button.ui-state-disabled:active {
+  border: 1px solid #5f5f5f;
+  background: #161616;
+  font-weight: normal;
+  color:var(--fill-icon);
+}
+.ui-datepicker-title, td, tr, tbody, .ui-datepicker-calendar, .ui-state-default{
+  background: #161616;
+color: var(--fill-icon);
+
+  border-color: #5e5e5e;
+}
+.ui-datepicker.ui-widget.ui-widget-content.ui-helper-clearfix.ui-corner-all, .ui-datepicker-title, .ui-datepicker-header.ui-widget-header.ui-helper-clearfix.ui-corner-all, .ui-datepicker-header.ui-widget-header.ui-helper-clearfix.ui-corner-all{
+background: #161616;
+color: var(--fill-icon);
+
+  border-color: #5e5e5e;
+}
+.ui-datepicker-next.ui-corner-all:focus,
+.ui-datepicker-prev.ui-corner-all:focus {
+  outline: none;
+
+  box-shadow: 0 0 0 3px rgba(156, 39, 176, 0.5);
+}
+/* Date */
+  @media (max-width: 768px) {
+    .drivers.section {
+      padding: 130px 10px 30px 10px;
+    }
+  
+    .drivers .title {
+      font-size: calc((100vw - 480px) / (768 - 480) * (88 - 64) + 55px);
+    }
+    .drivers .text {
+      width: 100%;
+    }
+    .form-drivers-form {
+      width: 100%;
+    }
+  }
+  
