@@ -38,7 +38,7 @@
                 <svg class="brokerage-track-icon" width="64" height="34">
                   <use href="/static/main/img/sprite.svg#icon-trailer"></use>
                 </svg>
-                <p class="brokerage-track-text">{{ el.trailer }}</p>
+                <p class="brokerage-track-text">{{ el.trailer }}см&sup3;</p>
               </li>
               {% endif %}
               {% if el.speed %}
@@ -74,9 +74,11 @@
                 <use href="/static/main/img/sprite.svg#icon-money"></use>
               </svg>
               <p class="brokerage-track-progress-text">${{el.price|floatformat:"0"}}</p>
+              {% if el.bargain %}
               <svg class="brokerage-track-sub-icon" width="18" height="18">
                 <use href="/static/main/img/sprite.svg#icon-vector-2"></use>
               </svg>
+              {% endif %}
             </div>
             <a class="btn" href="{% url 'truck_detail' el.pk %}">Truck Detail</a>
             

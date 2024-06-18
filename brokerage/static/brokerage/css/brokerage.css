@@ -23,6 +23,7 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     column-gap: 17px;
+    row-gap: 28px;
     margin-top: 43px;
   }
   
@@ -60,6 +61,7 @@
     justify-content: space-between;
     gap: 10px;
     height: 100%;
+    width: 60px;
   }
   .brokerage-track-icon {
     fill: var(--fill-icon);
@@ -67,12 +69,13 @@
   .brokerage-track-text {
     font-size: 14px;
     font-weight: 500;
-    text-align: left;
+    text-align: center;
     color: var(--text-color);
   }
   .brokerage-track-progress-bar {
     position: relative;
     display: flex;
+   width: 240px;
     gap: 14px;
   }
   .brokerage-track-progress-text {
