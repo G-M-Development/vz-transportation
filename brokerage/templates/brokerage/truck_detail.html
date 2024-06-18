@@ -112,25 +112,25 @@
   <div class="bacdrop is-hidden" id="bacdrop">
     <div class="modal">
       <button class="modal-close-btn" id="modal-close-btn" type="button"></button>
-      <form action="" method="post" class="contact-us-form" id="contact-us-form">
-        {% csrf_token %}
+      <form class="contact-us-form" id="contact-us-form">
+      
         <h3 class="contact-us-title sub-title">We will call you back</h3>
         <label class="label">
-          {{form.name}}
-          <!-- <input class="input" type="text" id="name" placeholder="" /> -->
+     
+          <input class="input" type="text" id="name" placeholder="" />
           <span class="label-span">Name</span>
         </label>
-        <div class="form-input-wrapper">
+    
           <label class="label">
-            {{form.email}}
-            <!-- <input class="input" type="email" id="email" placeholder="" /> -->
+       
+            <input class="input" type="email" id="email" placeholder="" />
             <span class="label-span">Email</span>
           </label>
-        </div>
-        <div class="form-input-wrapper">
-            {{ form.text }}
-          <!-- <textarea class="contact-us-textarea" name="comment" id="comment"></textarea> -->
-        </div>
+
+    
+     
+          <textarea class="contact-us-textarea" name="comment" id="comment"></textarea>
+    
         <button type="submit" class="btn">SEND</button>
       </form>
     </div>
@@ -138,6 +138,7 @@
 </section>
 <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script type="module" src="{% static 'brokerage/js/verificationFormBrokerage.js' %}"></script>
 <script>
   var swiper = new Swiper(".mySwiper", {
     spaceBetween: 10,

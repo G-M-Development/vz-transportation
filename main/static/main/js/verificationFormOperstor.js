@@ -1,8 +1,9 @@
 export default (() => {
   const form = document.getElementById('form-operator');
+  console.log(form)
   form.addEventListener('submit', function (event) {
     event.preventDefault();
-
+console.log("object")
     let isValid = true;
 
     const FirstNameInput = document.getElementById('FirstName');

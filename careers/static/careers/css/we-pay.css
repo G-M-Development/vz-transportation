@@ -1,0 +1,66 @@
+.we-pay {
+  background: rgba(21, 21, 21, 1);
+}
+
+.we-pay-wrap {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  justify-content: start;
+  gap: 170px;
+  padding: 60px 10px;
+}
+
+.we-pay .we-pay-wrap .text {
+  max-width: 891px;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 20px;
+  text-align: left;
+}
+
+.we-pay-wrap-img {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  padding-top: 160px;
+  padding-bottom: 432px;
+}
+
+.we-pay-wrap-img .container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.we-pay .btn {
+  background: var(--border-color);
+  color: var(--btn-color);
+}
+
+@media (max-width: 768px) {
+  .we-pay-wrap {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .we-pay .we-pay-wrap .text {
+    max-width: none;
+    font-size: calc((100vw - 480px) / (1280 - 480) * (24 - 16) + 16px);
+  }
+
+  .we-pay-wrap-img {
+    padding: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .we-pay-wrap-img .btn {
+    padding: 16px 30px;
+  }
+}

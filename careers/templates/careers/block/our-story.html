@@ -1,0 +1,33 @@
+<section class="our-story section">
+  <div class="container">
+    <div class="our-story-wrapper">
+      {% for el in card_text %}
+      <h2 class="title">{{el.card_title}}</h2>
+      <ul class="our-story-list">
+        <li class="our-story-item">
+          <p class="text">
+            {{el.card_description_first}}
+          </p>
+        </li>
+        <li class="our-story-item">
+          <p class="text">
+          {{el.card_description_second}}
+          </p>
+        </li>
+      </ul>
+      {% endfor %}
+    </div>
+    <ul class="oru-story-list-img">
+      {% for el in card_img %}
+      <li class="our-story-item-img">
+        <img
+          src="{{el.img.url}}"
+          alt=""
+          class="our-story-img"
+        />
+      </li>
+      {% endfor %}
+    </ul>
+
+  </div>
+</section>

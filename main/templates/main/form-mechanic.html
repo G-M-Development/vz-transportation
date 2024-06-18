@@ -1,0 +1,56 @@
+{% extends 'main/layout.html' %}
+ {% load static %} 
+ {% block style %}
+<link rel="stylesheet" href="{% static 'main/css/form-mechanic.css' %}" />
+{% endblock %}
+{% block title %} {{ title }} {% endblock %}
+{% block content %}
+
+<section class="mechanic section">
+    <div class="container">
+      <h2 class="title"><samp>Application for</samp> <samp>mechanic</samp></h2>
+      <p class="text">
+        Lorem ipsum dolor sit amet consectetur. Vel ut diam proin vitae tempor
+        semper. Dui ipsum rutrum nulla velit risus. Elementum aenean fermentum
+        facilisis auctor odio aliquam scelerisque amet in.
+      </p>
+      <h3 class="sub-title">Fill out the form</h3>
+      <form class="form-mechanic-form" id="form-mechanic">
+        <label class="label">
+          <input class="input" type="text" id="firstName" placeholder="" />
+          <span class="label-span">First Name</span>
+        </label>
+  
+        <label class="label">
+          <input class="input" type="text" id="lastName" placeholder="" />
+          <span class="label-span">Last Name</span>
+        </label>
+        <label class="label">
+          <input class="input" type="tel" id="phone" placeholder="" />
+          <span class="label-span">Phone</span>
+        </label>
+        <label for="datepicker" class="label">
+          <input
+            class="input"
+            type="text"
+            id="datepicker"
+            name="date-of-birth"
+            aria-label="Date of Birth"
+            placeholder=" "
+          /><span class="label-span"> Date of Birth?</span>
+        </label>
+        <label class="label">
+          <textarea
+            class="textarea"
+            name="comment"
+            id="comment"
+            placeholder=""
+          ></textarea>
+          <span class="label-span">Tell us about yourself</span>
+        </label>
+        <button type="submit" class="btn">SEND</button>
+      </form>
+    </div>
+  </section>
+  <script type="module" src="{% static 'main/js/verificationFormMechanic.js' %}"></script>
+{% endblock %}

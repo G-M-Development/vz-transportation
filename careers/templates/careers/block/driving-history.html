@@ -1,0 +1,26 @@
+{% for el in driving_history %}
+<style>
+
+.driving-history.section {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url('{{el.img_background.url}}');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+</style>
+{% endfor %}
+
+<section class="driving-history section">
+  <div class="container">
+    <div class="driving-history-wrap">
+      {% for el in driving_history %}
+      <h2 class="title">{{ el.title }}</h2>
+      <p class="text">
+        {{ el.text }}
+      </p>
+    {% endfor %}
+      <a href="./contact-us.html" class="btn">Apply Now</a>
+    </div>
+  </div>
+</section>

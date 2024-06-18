@@ -1,0 +1,15 @@
+{% extends 'main/layout.html' %}
+ {% load static %} 
+ {% block style %}
+<link rel="stylesheet" href="{% static 'careers/css/index.css' %}" />
+{% endblock %}
+{% block title %} CAREERS {% endblock %}
+{% block content %}
+{% include 'careers/block/hero.html' %} 
+{% include 'careers/block/our-story.html' %} 
+{% include 'careers/block/why-us.html' %} 
+{% include 'careers/block/driving-history.html' %} 
+{% include 'careers/block/offer.html' %} 
+{% include 'careers/block/we-pay.html' %} 
+
+{% endblock %}

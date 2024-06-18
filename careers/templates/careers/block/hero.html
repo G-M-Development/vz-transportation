@@ -1,0 +1,19 @@
+
+{% for el in hero %}
+<style>
+  .careers-hero {
+    background-color: rgba(0, 0, 0, 1);
+    background: linear-gradient(273.87deg, rgba(0, 0, 0, 0) 0%, #000000 80%),
+    url('{{ el.img.url }}');
+    background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+</style>
+{% endfor %}
+
+<section class="careers-hero section">
+  <div class="container">
+    <h1 class="careers-hero-title title">We are hiring truck drivers</h1>
+  </div>
+</section>

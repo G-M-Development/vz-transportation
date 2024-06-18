@@ -1,0 +1,18 @@
+<section class="offer section">
+  <div class="container">
+    {% for el in offers %}
+    <h2 class="title">
+          {{el.title}}
+      <!-- <span>We</span><span>Offer:</span> -->
+    </h2>
+    {% endfor %}
+    <ul class="offer-list">
+      {% for el in offers_card %}
+      <li class="offer-item">
+        <img src="{{el.img_background.url}}" class="offer-icon" width="32" height="32"/>
+            <p class="offer-text">{{ el.text }}</p>
+      </li>
+      {% endfor %}
+        </ul>
+  </div>
+</section>

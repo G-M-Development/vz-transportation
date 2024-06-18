@@ -11,81 +11,55 @@
 {% block content %}
 <section class="drivers section">
     <div class="container">
-        <h2 class="title"><samp>Application for</samp> <samp>drivers</samp></h2>
-        <p class="text">
-            Lorem ipsum dolor sit amet consectetur. Vel ut diam proin vitae tempor
-            semper. Dui ipsum rutrum nulla velit risus. Elementum aenean fermentum
-            facilisis auctor odio aliquam scelerisque amet in.
-        </p>
-        <h3 class="sub-title">Fill out the form</h3>
-        <form method="post" action="{% url 'form_drivers' %}" class="form-drivers-form" id="form-drivers">
-          {% csrf_token %}
-          {{ form.non_field_errors }}
-          <label class="label">
-              {{ form.first_name.errors }}
-              {{ form.first_name }}
-              <span class="label-span">First Name</span>
-          </label>
-          <label class="label">
-              {{ form.last_name.errors }}
-              {{ form.last_name }}
-              <span class="label-span">Last Name</span>
-          </label>
-          <label class="label">
-              {{ form.phone.errors }}
-              {{ form.phone }}
-              <span class="label-span">Phone</span>
-          </label>
-          <label for="datepicker" class="label">
-              {{ form.date_of_birth.errors }}
-              {{ form.date_of_birth }}
-              <span class="label-span">Date of Birth</span>
-          </label>
-          <label class="label">
-              {{ form.work_experience.errors }}
-              {{ form.work_experience }}
-              <span class="label-span">Work experience</span>
-          </label>
-          <button type="submit" class="btn">SEND</button>
+      <h2 class="title"><samp>Application for</samp> <samp>drivers</samp></h2>
+      <p class="text">
+        Lorem ipsum dolor sit amet consectetur. Vel ut diam proin vitae tempor
+        semper. Dui ipsum rutrum nulla velit risus. Elementum aenean fermentum
+        facilisis auctor odio aliquam scelerisque amet in.
+      </p>
+      <h3 class="sub-title">Fill out the form</h3>
+      <form class="form-drivers-form" id="form-drivers">
+        <label class="label">
+          <input class="input" type="text" id="firstName" placeholder="" />
+          <span class="label-span">First Name</span>
+        </label>
+  
+        <label class="label">
+          <input
+            class="form-operator-input input"
+            type="text"
+            id="lastName"
+            placeholder=""
+          />
+          <span class="label-span">Last Name</span>
+        </label>
+        <label class="label">
+          <input class="input" type="tel" id="tel" mame="tel" placeholder="" />
+          <span class="label-span">Phone</span>
+        </label>
+        <label for="datepicker" class="label">
+          <input
+            class="form-operator-input input"
+            type="text"
+            id="datepicker"
+            name="date-of-birth"
+            aria-label="Date of Birth"
+            placeholder=" "
+          /><span class="label-span"> Date of Birth?</span>
+        </label>
+        <label class="label">
+          <input class="input" type="text" id="experience" placeholder="" />
+          <span class="label-span">Work experience</span>
+        </label>
+        <button type="submit" class="btn">SEND</button>
       </form>
-      
-        <!-- <form method="post" class="form-drivers-form" id="form-drivers">
-            {% csrf_token %}
-            <label class="label">
-                {{ form.first_name }}
-                <span class="label-span">First Name</span>
-            </label>
-
-            <label class="label">
-                {{ form.last_name }}
-                <span class="label-span">Last Name</span>
-            </label>
-
-            <label class="label">
-                {{ form.phone }}
-                <span class="label-span">Phone</span>
-            </label>
-
-            <label for="datepicker" class="label">
-                {{ form.date_of_birth }}
-                <span class="label-span"> Date of Birth?</span>
-            </label>
-
-            <label class="label">
-                {{ form.work_experience }}
-                <span class="label-span">Work experience</span>
-                {% if form.work_experience.errors %}
-                <span class="error">{{ form.work_experience.errors }}</span>
-                {% endif %}
-            </label>
-
-            <button type="submit" class="btn">SEND</button>
-        </form> -->
     </div>
-</section>
+  </section>
+  
 
 <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
 <script src="https://code.jquery.com/ui/1.13.3/jquery-ui.js"></script>
+<script type="module" src="{% static 'main/js/verificationFormDriver.js' %}"></script>
 <script>
     $(function () {
         $('#datepicker').datepicker();

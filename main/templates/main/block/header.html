@@ -40,7 +40,7 @@
             </div>
           </li>
           <li class="header-nav-item">
-            <a class="header-nav-link" href="./careers.html">Careers</a>
+            <a class="header-nav-link" href="{% url 'careers' %}">Careers</a>
           </li>
           <li class="header-nav-item">
             <a class="header-nav-link" href="{% url 'brokerage' %}">Brokerage</a>
@@ -62,13 +62,13 @@
               <div class="inner">
                 <ul class="sub-menu-list">
                   <li>
-                    <a class="header-nav-link" href="./owner-operator.html">Application for owner operator</a>
+                    <a class="header-nav-link" href="{% url 'form_operator' %}">Application for owner operator</a>
                   </li>
                   <li>
                     <a class="header-nav-link" href="{% url 'form_drivers' %}">Application for drivers</a>
                   </li>
                   <li>
-                    <a class="header-nav-link" href="./form-mechanic.html">Application for Mechanic</a>
+                    <a class="header-nav-link" href="{% url 'form_mechanic' %}">Application for Mechanic</a>
                   </li>
                 </ul>
               </div>
@@ -81,9 +81,7 @@
     <ul class="header-list-logo">
       <li>
         <a href="https://www.facebook.com/" class="social-link">
-          <svg class="header-icon" height="32" width="32">
-            <use href="{% static 'main/img/icon-facebook.svg' %}"></use>
-          </svg>
+          <img class="heder-sub-logo" src="{% static 'main/img/facebook.png' %}" alt="logo" />
         </a>
       </li>
       <li>

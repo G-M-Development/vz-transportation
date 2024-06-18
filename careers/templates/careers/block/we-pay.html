@@ -1,0 +1,27 @@
+{% for el in we_pay %}
+<style>
+  .we-pay-wrap-img {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url('{{el.img_background.url}}') no-repeat;
+  background-size: cover;
+}
+</style>
+<section class="we-pay section">
+  <div class="container">
+    <div class="we-pay-wrap">
+      <h2 class="title">{{el.title}}</h2>
+      <p class="text">
+      {{el.text}}
+      </p>
+    </div>
+  </div>
+  <div class="we-pay-wrap-img">
+    <div class="container">
+      <h3 class="title">{{ el.sub_title}}</h3>
+      <button class="btn" onclick="window.location.href='./contact-us.html'">
+        Apply Now
+      </button>
+    </div>
+  </div>
+</section>
+{% endfor %}

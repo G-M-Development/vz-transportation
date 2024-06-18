@@ -1,0 +1,74 @@
+.mechanic.section {
+    padding: 68px 315px 30px 145px;
+  }
+  .mechanic .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .mechanic .title {
+    font-size: 64px;
+    font-weight: 600;
+    line-height: 100.8px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .mechanic .text {
+    width: 540px;
+    text-align: center;
+    margin-top: 11px;
+  }
+  .mechanic .sub-title {
+    font-size: 15.5px;
+    font-weight: 600;
+    line-height: 16px;
+    text-align: left;
+    margin-top: 43px;
+    width: 428px;
+  }
+  .mechanic .form-mechanic-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 11px;
+    width: 428px;
+    margin-top: 21px;
+  }
+  .mechanic .form-mechanic-form .textarea {
+    height: 90px;
+    padding: 15px 10px;
+  }
+  .mechanic .form-mechanic-form .btn {
+    background: var(--fill-icon);
+    color: var(--text-color);
+    width: 100%;
+    margin-top: 32px;
+  }
+  
+  @media (max-width: 768px) {
+    .mechanic.section {
+      padding: 130px 10px 30px 10px;
+    }
+  
+    .mechanic .title {
+      font-size: calc((100vw - 480px) / (768 - 480) * (88 - 64) + 55px);
+    }
+    .mechanic .text {
+      font-size: calc((100vw - 480px) / (768 - 480) * (20 - 15) + 15px);
+      width: 100%;
+    }
+    .mechanic .sub-title {
+      font-size: calc((100vw - 480px) / (768 - 480) * (20 - 15) + 15px);
+      width: 100%;
+      text-align: left;
+    }
+    .mechanic .form-mechanic-form {
+      width: 100%;
+    }
+  }
+  

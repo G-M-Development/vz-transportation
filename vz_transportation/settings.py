@@ -34,6 +34,7 @@ APPEND_SLASH = False
 # Application definition
 
 INSTALLED_APPS = [
+    'careers',
     'contact',
     'services',
     'brokerage',

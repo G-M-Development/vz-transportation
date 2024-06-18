@@ -1,0 +1,105 @@
+{% extends 'main/layout.html' %}
+ {% load static %} 
+ {% block style %}
+ <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.3/themes/base/jquery-ui.css">
+<link rel="stylesheet" href="{% static 'main/css/form_operator.css' %}" />
+{% endblock %}
+{% block title %} Application for owner operator {% endblock %}
+{% block content %}
+<section class="form-operator section">
+    <div class="container">
+      <h2 class="operator-title">
+        <samp>Application for owner</samp> <span>operator</span>
+      </h2>
+      <p class="operator-text">
+        Lorem ipsum dolor sit amet consectetur. Vel ut diam proin vitae tempor
+        semper. Dui ipsum rutrum nulla velit risus. Elementum aenean fermentum
+        facilisis auctor odio aliquam scelerisque amet in.
+      </p>
+      <h3 class="operator-sub-title">We will call you back</h3>
+      <form class="form-operator-form" id="form-operator">
+        <div class="form-operator-wrap">
+          <div class="form-input-wrapper">
+            <label class="label">
+              <input
+                class="form-operator-input input"
+                type="text"
+                placeholder=""
+                id="FirstName"
+              />
+              <span class="label-span">First Name</span></label
+            >
+            <label class="label">
+              <input
+                class="form-operator-input input"
+                type="text"
+                placeholder=""
+                id="LastName"
+              />
+              <span class="label-span">Last Name</span>
+            </label>
+          </div>
+          <div class="form-input-wrapper">
+            <label class="label">
+              <input
+                class="form-operator-input input"
+                type="tel"
+                placeholder=""
+                id="phone"
+              /><span class="label-span"> Phone</span></label
+            >
+            <label for="datepicker" class="label">
+              <input
+                class="form-operator-input input"
+                type="text"
+                id="datepicker"
+                name="date-of-birth"
+                aria-label="Date of Birth"
+                placeholder=" "
+              /><span class="label-span"> Date of Birth?</span>
+            </label>
+          </div>
+  
+          <div class="form-input-wrapper">
+            <label class="label">
+              <input
+                class="form-operator-input input"
+                type="text"
+                placeholder=""
+                id="truck"
+              /><span class="label-span"> Truck</span></label
+            >
+            <label class="label">
+              <input
+                class="form-operator-input input"
+                type="text"
+                placeholder=""
+                id="experience"
+              /><span class="label-span"> Experience</span>
+            </label>
+          </div>
+        </div>
+        <div class="radio-wrapper">
+          <label class="select-label" for="dry-van">
+            <input type="radio" id="dry-van" name="truck" value="dry-van" />
+            <span class="radio-span"> Dry van </span>
+          </label>
+          <label class="select-label reefer" for="reefer">
+            <input type="radio" id="reefer" name="truck" value="reefer" />
+            <span class="radio-span reefer">Reefer </span>
+          </label>
+        </div>
+        <button type="submit" class="btn">SEND</button>
+      </form>
+    </div>
+  </section>
+  <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+<script src="https://code.jquery.com/ui/1.13.3/jquery-ui.js"></script>
+<script type="module" src="{% static 'main/js/verificationFormOperstor.js' %}"></script>
+
+<script>
+    $(function () {
+        $('#datepicker').datepicker();
+    });
+</script>
+{% endblock %}
