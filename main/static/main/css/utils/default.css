@@ -139,6 +139,7 @@ main {
   color: var(--text-color);
   transition: top 0.3s ease;
   color: #a3a3a3;
+  resize: none;
 }
 
 .textarea:focus + .label-span,

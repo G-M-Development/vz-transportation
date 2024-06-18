@@ -4,6 +4,7 @@ from django.db import models
 from django.core.files.storage import default_storage
 from django.db.models.signals import pre_save
 from django.dispatch import receiver
+from django.core.exceptions import ValidationError
 
 class ImageModel(models.Model):
     class Meta:
@@ -45,6 +46,12 @@ def unique_file_name(instance, filename, field_name):
         return file_path
     return file_path
 
+
+def validate_video_file_extension(value):
+    if not value.name.endswith('.mp4'):
+        raise ValidationError(u'Only .mp4 files are allowed.')
+
+
 class Main(ImageModel):
     # Header nav menu
     Link_first = models.CharField('Link First', max_length=100, default='No title')
@@ -52,7 +59,20 @@ class Main(ImageModel):
     Link_third = models.CharField('Link Third', max_length=100, default='No title')
     # Main 
     main_title = models.CharField('Main Title', max_length=100, default='No title')
-    main_background_img = models.ImageField('Main Background Image', upload_to='images/', null=True, blank=True)
+    main_background_video = models.FileField(
+        'Main Background Video', 
+        upload_to='videos/', 
+        null=True, 
+        blank=True, 
+        validators=[validate_video_file_extension]
+    )
+    main_background_video_mobile = models.FileField(
+        'Main Background Video Mobile', 
+        upload_to='videos/', 
+        null=True, 
+        blank=True, 
+        validators=[validate_video_file_extension]
+    )
     # Main Card
     main_card_title_first = models.CharField('Main Card Title First', max_length=100, default='No title')
     main_card_text_first = models.TextField('Main Card Text First', null=True, blank=True)

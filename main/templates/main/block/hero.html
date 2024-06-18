@@ -1,19 +1,30 @@
 {% for item in main %}
-<style>.hero .hero-background {
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-  url('{{ item.main_background_img.url }}');
-  background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;}
+<style>
+ @media (max-width: 767px) {
+    .responsive-video source {
+        content: url("");
+    }
+}
 </style>
 <section class="hero section">
   <div class="hero-background">
-    <h1 class="hero-title title">
-        {{ item.main_title }}<br>
-      {% endfor %}
-    </h1>
+    {% if item.main_background_video %}
+    <video class="responsive-video" autoplay muted loop playsinline style="width: 100%; height: auto;">
+        <source  id="video-source" src="{{ item.main_background_video.url }}" type="video/mp4">
+        
+    </video> 
+    <video class="responsive-video-mobil" autoplay muted loop playsinline style="width: 100%; height: auto;">
+      <source  id="video-source" src="{{ item.main_background_video_mobile.url }}" type="video/mp4">
+      
+  </video>
+{% endif %}
+<h1 class="hero-title title">
+  {{ item.main_title }}<br>
+</h1>
   </div>
   <div class="container">
+   
+    {% endfor %}
     <ul class="hero-list">
       {% for item in main %}
       <li class="hero-item">
