@@ -51,11 +51,13 @@
   transition: background-color 250ms ease-out;
 }
 
-.project-item-inner:is(:hover, :focus) {
+.project-item-inner.project-first:is(:hover, :focus),
+.project-item-inner.project-second:is(:hover, :focus)  {
   background-size: 150%;
 }
 
-.project-item-inner:is(:hover, :focus) .bg-color {
+.project-item-inner.project-first:is(:hover, :focus) .bg-color,
+.project-item-inner.project-second:is(:hover, :focus) .bg-color {
   background-color: rgba(0, 0, 0, 0.4);
 }
 

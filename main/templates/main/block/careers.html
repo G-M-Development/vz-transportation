@@ -16,7 +16,7 @@
         <p class="text">
           {{ item.careers_text }}
         </p>
-        <button class="btn" onclick="window.location.href='./contact-us.html'">
+        <button class="btn" onclick="window.location.href='{% url 'contact' %}'">
           CONTACT US
         </button>
       </div>
@@ -25,7 +25,7 @@
   <div class="container card-container">
     <ul class="careers-list">
       <li class="careers-item">
-        <a href="./form-drivers.html" class="careers-link">
+        <a href="{% url 'form_drivers' %}" class="careers-link">
           <span class="careers-text">
             <span class="careers-span">Become </span>
             <span class="careers-span">truck Driver</span>
@@ -38,7 +38,7 @@
         </a>
       </li>
       <li class="careers-item">
-        <a href="./owner-operator.html" class="careers-link">
+        <a href="{% url 'form_operator' %}" class="careers-link">
           <span class="careers-text">
             <span class="careers-span">Become </span>
             <span class="careers-span">owner operators</span>
@@ -51,7 +51,7 @@
         </a>
       </li>
       <li class="careers-item">
-        <a href="/form-mechanic.html" class="careers-link">
+        <a href="{% url 'form_mechanic' %}" class="careers-link">
           <span class="careers-text">
             <span class="careers-span">Become </span>
             <span class="careers-span">full-time truck mechanic </span>

@@ -24,14 +24,7 @@
             <span class="company-info-note"
               >{{el.card_text}}</span
             >
-            <!-- <span class="company-info-note"
-              >A great chef, in order to better discover his culinary skills, he
-              traces all the major food cultures along the way and eventually
-              becomes a super chef. The story is interspersed with various
-              culinary techniques and cultural elements to give the reader a
-              taste of the food.</span
-            > -->
-          </p>
+                   </p>
         </div>
         <div class="company-wrap-iframe">
           <iframe
@@ -51,10 +44,8 @@
 
   <style>
     .company-info-btn-wrap {
-
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url('{{ el.info_background_img.url }}');
-
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -63,9 +54,9 @@
   <div class="company-info-btn-wrap">
     <div class="container">
       <h3 class="title">{{ el.info_title }}</h3>
-      <button class="btn" onclick="window.location.href='./contact-us.html'">
+      <a class="btn" href="{% url 'contact' %}">
         Contact us
-      </button>
+      </a>
     </div>
   </div>
   {% endfor %}

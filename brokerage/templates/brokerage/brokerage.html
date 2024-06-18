@@ -78,9 +78,7 @@
                 <use href="/static/main/img/sprite.svg#icon-vector-2"></use>
               </svg>
             </div>
-            <button class="btn" type="button" onclick="window.location.href='{% url 'truck_detail' el.pk %}'">
-                Details
-            </button>
+            <a class="btn" href="{% url 'truck_detail' el.pk %}">Truck Detail</a>
             
           </div>
         </div>
