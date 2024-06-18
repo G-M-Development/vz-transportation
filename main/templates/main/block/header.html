@@ -62,21 +62,21 @@
               <div class="inner">
                 <ul class="sub-menu-list">
            
-                  <li>
+                  <li class="header-nav-item ">
                     <a class="header-nav-link" href="{% url 'form_operator' %}">  
                       {% for item in main %}
                       {{ item.Link_first }}
                        {% endfor %}
                       </a>
                   </li>
-                  <li>
+                  <li class="header-nav-item ">
                     <a class="header-nav-link" href="{% url 'form_drivers' %}">
                       {% for item in main %}
                       {{ item.Link_second }}
                       {% endfor %}
                     </a>
                   </li>
-                  <li>
+                  <li class="header-nav-item ">
                     <a class="header-nav-link" href="{% url 'form_mechanic' %}">
                       {% for item in main %}
                       {{ item.Link_third }}
@@ -92,15 +92,15 @@
     </div>
 
     <ul class="header-list-logo">
-      <li>
+      <li class="header-nav-item ">
         <a href="https://www.facebook.com/" class="social-link">
           <img class="heder-sub-logo" src="{% static 'main/img/facebook.png' %}" alt="logo" />
         </a>
       </li>
-      <li>
+      <li class="header-nav-item ">
         <a href="/"> <img class="heder-sub-logo" src="{% static 'main/img/second-logo.png' %}" alt="logo" /></a>
       </li>
-      <li>
+      <li class="header-nav-item ">
         <a href="/"> <img class="heder-sub-logo" src="{% static 'main/img/third-logo.png' %}" alt="logo" /></a>
       </li>
     </ul>
