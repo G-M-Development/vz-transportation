@@ -1,11 +1,16 @@
 .truck-details .container {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     gap: 19px;
     justify-content: start;
     align-items: start;
     padding-top: 150px;
   }
+
+.truck-wrap{
+  display: flex;
+}
+
   .truck-details .wrapper {
     display: flex;
     flex-direction: column;
@@ -51,7 +56,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    /* width: 100%; */
+    width: 100%;
     gap: 10px;
   }
   
@@ -131,7 +136,17 @@
     margin-top: 95px;
   }
   
-  .details-track-icon {
+.details-item{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+.brokerage-track-text{
+  text-align: center;
+}
+  .details-track-icon, .brokerage-track-icon {
     fill: var(--fill-icon);
   }
   .details-track-text {
@@ -148,7 +163,7 @@
     padding: 52px 20px 20px 20px;
     background: #525252;
     border-bottom: 4px solid var(--fill-icon);
-    margin-top: 107px;
+   
   }
   .details-track-progress-bar {
     position: relative;
@@ -195,7 +210,7 @@
     align-items: start;
     justify-content: start;
     width: 100%;
-    gap: 10px;
+        gap: 10px;
   }
   .contact-us-form .input:focus + .label-span,
   .contact-us-form .input:not(:placeholder-shown) + .label-span {
@@ -229,7 +244,10 @@
     .truck-details .container {
       flex-direction: column;
     }
-  
+    .truck-wrap{
+      
+      flex-direction: column;
+    }
     .truck-details .wrapper {
       flex-basis: 100%;
       flex-shrink: 0;

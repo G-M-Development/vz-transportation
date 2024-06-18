@@ -54,12 +54,13 @@
 }
 
 .nav-icon {
-  fill: var(--fill-icon);
+
   flex-shrink: 0;
   transition: 300ms ease-out;
 }
 
 .header-nav-link {
+
   display: block;
   padding: 20px 0;
   position: relative;
