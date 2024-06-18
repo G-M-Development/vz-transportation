@@ -61,15 +61,28 @@
             <div class="wrapper">
               <div class="inner">
                 <ul class="sub-menu-list">
+           
                   <li>
-                    <a class="header-nav-link" href="{% url 'form_operator' %}">Application for owner operator</a>
+                    <a class="header-nav-link" href="{% url 'form_operator' %}">  
+                      {% for item in main %}
+                      {{ item.Link_first }}
+                       {% endfor %}
+                      </a>
                   </li>
                   <li>
-                    <a class="header-nav-link" href="{% url 'form_drivers' %}">Application for drivers</a>
+                    <a class="header-nav-link" href="{% url 'form_drivers' %}">
+                      {% for item in main %}
+                      {{ item.Link_second }}
+                      {% endfor %}
+                    </a>
                   </li>
                   <li>
-                    <a class="header-nav-link" href="{% url 'form_mechanic' %}">Application for Mechanic</a>
+                    <a class="header-nav-link" href="{% url 'form_mechanic' %}">
+                      {% for item in main %}
+                      {{ item.Link_third }}
+                      {% endfor %}</a>
                   </li>
+         
                 </ul>
               </div>
             </div>

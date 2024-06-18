@@ -1,6 +1,7 @@
 
 from django.shortcuts import render
 from .models import *
+from main.models import Main
 
 def careers(request):
     context = {
@@ -15,6 +16,7 @@ def careers(request):
         "offers" : Offers.objects.all(),
         "offers_card" : OffersCard.objects.all(),
         "card_text_2" : CardText.objects.all(),
+        "main" : Main.objects.all(),
 
     }
 

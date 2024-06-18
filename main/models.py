@@ -46,6 +46,11 @@ def unique_file_name(instance, filename, field_name):
     return file_path
 
 class Main(ImageModel):
+    # Header nav menu
+    Link_first = models.CharField('Link First', max_length=100, default='No title')
+    Link_second = models.CharField('Link Second', max_length=100, default='No title')
+    Link_third = models.CharField('Link Third', max_length=100, default='No title')
+    # Main 
     main_title = models.CharField('Main Title', max_length=100, default='No title')
     main_background_img = models.ImageField('Main Background Image', upload_to='images/', null=True, blank=True)
     # Main Card
