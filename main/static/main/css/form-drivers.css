@@ -1,51 +1,51 @@
 .drivers.section {
-    padding: 68px 315px 30px 145px;
-  }
-  .drivers .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-  .drivers .title {
-    font-size: 64px;
-    font-weight: 600;
-    line-height: 100.8px;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-  }
-  .drivers .text {
-    width: 540px;
-    text-align: center;
-    margin-top: 11px;
-  }
-  .drivers .sub-title {
-    font-size: 15.5px;
-    font-weight: 600;
-    line-height: 16px;
-    text-align: left;
-    margin-top: 43px;
-    width: 428px;
-  }
-  .form-drivers-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 11px;
-    width: 428px;
-    margin-top: 21px;
-  }
-  .drivers .form-drivers-form .btn {
-    background: var(--fill-icon);
-    color: var(--text-color);
-    width: 100%;
-    margin-top: 32px;
-  }
-  /* Date */
+  padding: 68px 315px 30px 145px;
+}
+.drivers .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.drivers .title {
+  font-size: 64px;
+  font-weight: 600;
+  line-height: 100.8px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.drivers .text {
+  width: 540px;
+  text-align: center;
+  margin-top: 11px;
+}
+.drivers .sub-title {
+  font-size: 15.5px;
+  font-weight: 600;
+  line-height: 16px;
+  text-align: left;
+  margin-top: 43px;
+  width: 428px;
+}
+.form-drivers-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 11px;
+  width: 428px;
+  margin-top: 21px;
+}
+.drivers .form-drivers-form .btn {
+  background: var(--fill-icon);
+  color: var(--text-color);
+  width: 100%;
+  margin-top: 32px;
+}
+/* Date */
 .ui-datepicker,
 .ui-datepicker-header,
 .ui-datepicker-week-end,
@@ -74,21 +74,34 @@ html .ui-button.ui-state-disabled:active {
 
   color: #fff;
 }
-.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default, .ui-button, html .ui-button.ui-state-disabled:hover, html .ui-button.ui-state-disabled:active {
+.ui-state-default,
+.ui-widget-content .ui-state-default,
+.ui-widget-header .ui-state-default,
+.ui-button,
+html .ui-button.ui-state-disabled:hover,
+html .ui-button.ui-state-disabled:active {
   border: 1px solid #5f5f5f;
   background: #161616;
   font-weight: normal;
-  color:var(--fill-icon);
+  color: var(--fill-icon);
 }
-.ui-datepicker-title, td, tr, tbody, .ui-datepicker-calendar, .ui-state-default{
+.ui-datepicker-title,
+td,
+tr,
+tbody,
+.ui-datepicker-calendar,
+.ui-state-default {
   background: #161616;
-color: var(--fill-icon);
+  color: var(--fill-icon);
 
   border-color: #5e5e5e;
 }
-.ui-datepicker.ui-widget.ui-widget-content.ui-helper-clearfix.ui-corner-all, .ui-datepicker-title, .ui-datepicker-header.ui-widget-header.ui-helper-clearfix.ui-corner-all, .ui-datepicker-header.ui-widget-header.ui-helper-clearfix.ui-corner-all{
-background: #161616;
-color: var(--fill-icon);
+.ui-datepicker.ui-widget.ui-widget-content.ui-helper-clearfix.ui-corner-all,
+.ui-datepicker-title,
+.ui-datepicker-header.ui-widget-header.ui-helper-clearfix.ui-corner-all,
+.ui-datepicker-header.ui-widget-header.ui-helper-clearfix.ui-corner-all {
+  background: #161616;
+  color: var(--fill-icon);
 
   border-color: #5e5e5e;
 }
@@ -99,19 +112,113 @@ color: var(--fill-icon);
   box-shadow: 0 0 0 3px rgba(156, 39, 176, 0.5);
 }
 /* Date */
-  @media (max-width: 768px) {
-    .drivers.section {
-      padding: 130px 10px 30px 10px;
-    }
-  
-    .drivers .title {
-      font-size: calc((100vw - 480px) / (768 - 480) * (88 - 64) + 55px);
-    }
-    .drivers .text {
-      width: 100%;
-    }
-    .form-drivers-form {
-      width: 100%;
-    }
+input[type="file"] {
+  display: none;
+}
+.custom-file-upload {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  width: 100%;
+  border: 1px solid var(--border-input);
+  padding: 15px 0;
+  background: #2b2a2a;
+  transition: all 0.3s ease;
+}
+
+.custom-file-upload:hover {
+  background: #181818;
+}
+.agreement {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.check {
+  text-align: center;
+}
+/*===== modal =====*/
+.modal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40vh;
+}
+.modal-content {
+  background-color: #fefefe;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 100%;
+  height: 100%;
+  /* max-width: 600px;
+  max-height: 600px; */
+  border-radius: 10px;
+  position: relative;
+  overflow: scroll;
+  text-align: left;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.close {
+  color: #aaa;
+  font-size: 28px;
+  font-weight: bold;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.check {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  width: 100%;
+  font-family: 'Inter';
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 1.6;
+    color: var(--text-color);
+
+}
+
+.check a {
+  color: #007bff;
+  text-decoration: none;
+  margin-left: 5px;
+}
+
+.check a:hover {
+  text-decoration: underline;
+}
+
+.submit-button {
+  margin-top: 10px;
+}
+/* ================ */
+@media (max-width: 768px) {
+  .drivers.section {
+    padding: 130px 10px 30px 10px;
   }
-  
+
+  .drivers .title {
+    font-size: calc((100vw - 480px) / (768 - 480) * (88 - 64) + 55px);
+  }
+  .drivers .text {
+    width: 100%;
+  }
+  .form-drivers-form {
+    width: 100%;
+  }
+}

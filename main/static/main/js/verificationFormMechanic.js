@@ -1,65 +1,81 @@
+import { URL_API } from "./config";
 export default (() => {
-  const form = document.getElementById('form-mechanic');
+  const form = document.getElementById("form-mechanic");
 
-  form.addEventListener('submit', function (event) {
+  form.addEventListener("submit", function (event) {
     event.preventDefault();
     let isValid = true;
 
-    const lastNameInput = document.getElementById('lastName');
+    const lastNameInput = document.getElementById("lastName");
+    const firstNameInput = document.getElementById("firstName");
+    const phoneInput = document.getElementById("phone");
+    const datepickerInput = document.getElementById("datepicker");
+    const commentInput = document.getElementById("comment");
 
-    if (lastNameInput.value.trim() === '') {
-      lastNameInput.classList.add('error');
+    if (lastNameInput.value.trim() === "") {
+      lastNameInput.classList.add("error");
       isValid = false;
     } else {
-      lastNameInput.classList.remove('error');
+      lastNameInput.classList.remove("error");
     }
 
-    const firstNameInput = document.getElementById('firstName');
-    if (firstNameInput.value.trim() === '') {
-      firstNameInput.classList.add('error');
+    if (firstNameInput.value.trim() === "") {
+      firstNameInput.classList.add("error");
       isValid = false;
     } else {
-      firstNameInput.classList.remove('error');
+      firstNameInput.classList.remove("error");
     }
 
-    const phoneInput = document.getElementById('phone');
-
-    const telPattern =
-      /\b(?:(?:\+1[-.\s]?)|(?:1[-.\s]?))?\(?\d{3}\)?[-.\s]?\d{3}[-.\s]?\d{4}\b/;
+    const telPattern = /\b(?:(?:\+1[-.\s]?)|(?:1[-.\s]?))?\(?\d{3}\)?[-.\s]?\d{3}[-.\s]?\d{4}\b/;
     if (!telPattern.test(phoneInput.value)) {
-      phoneInput.classList.add('error');
+      phoneInput.classList.add("error");
       isValid = false;
     } else {
-      phoneInput.classList.remove('error');
+      phoneInput.classList.remove("error");
     }
 
-    const datepickerInput = document.getElementById('datepicker');
-    if (datepickerInput.value.trim() === '') {
-      datepickerInput.classList.add('error');
+    if (datepickerInput.value.trim() === "") {
+      datepickerInput.classList.add("error");
       isValid = false;
     } else {
-      datepickerInput.classList.remove('error');
+      datepickerInput.classList.remove("error");
     }
 
-    const commentInput = document.getElementById('comment');
-    if (commentInput.value.trim() === '') {
-      commentInput.classList.add('error');
+    if (commentInput.value.trim() === "") {
+      commentInput.classList.add("error");
       isValid = false;
     } else {
-      commentInput.classList.remove('error');
+      commentInput.classList.remove("error");
     }
 
     if (isValid) {
-      const formData = {
-        lastName: lastNameInput.value.trim(),
-        firstName: firstNameInput.value.trim(),
-        phone: phoneInput.value.trim(),
-        datepicker: datepickerInput.value.trim(),
-        comment: commentInput.value.trim(),
-      };
+      const formData = new FormData();
 
-      console.log(formData);
-      form.reset();
+      formData.append("LastName", lastNameInput.value.trim());
+      formData.append("FirstName", firstNameInput.value.trim());
+      formData.append("phone", phoneInput.value.trim());
+      formData.append("dateOfBirth", datepickerInput.value.trim());
+      formData.append("comment", commentInput.value.trim());
+      formData.append("subject", "APPLICATION FOR MECHANIC");
+
+      fetch(`${URL_API}/send-email`, {
+        method: "POST",
+        body: formData,
+      })
+        .then((response) => response.text())
+        .then((data) => {
+          alert("Form submitted successfully");
+
+          form.reset();
+
+          const formInputs = form.querySelectorAll("input, textarea");
+          formInputs.forEach((input) => {
+            input.classList.remove("error");
+          });
+        })
+        .catch((error) => {
+          alert("Form submission failed");
+        });
     }
   });
 })();

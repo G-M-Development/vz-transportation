@@ -11,6 +11,13 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 """
 
 from pathlib import Path
+#ENVIROMENT VARIABLES
+import os
+import environ
+
+env = environ.Env()
+
+API_URL = 'dasd'#env('API_URL')
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent

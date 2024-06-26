@@ -1,74 +1,139 @@
 .mechanic.section {
-    padding: 68px 315px 30px 145px;
+  padding: 68px 315px 30px 145px;
+}
+.mechanic .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.mechanic .title {
+  font-size: 64px;
+  font-weight: 600;
+  line-height: 100.8px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.mechanic .text {
+  width: 540px;
+  text-align: center;
+  margin-top: 11px;
+}
+.mechanic .sub-title {
+  font-size: 15.5px;
+  font-weight: 600;
+  line-height: 16px;
+  text-align: left;
+  margin-top: 43px;
+  width: 428px;
+}
+.mechanic .form-mechanic-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 11px;
+  width: 428px;
+  margin-top: 21px;
+}
+.mechanic .form-mechanic-form .textarea {
+  height: 90px;
+  padding: 15px 10px;
+}
+.mechanic .form-mechanic-form .btn {
+  background: var(--fill-icon);
+  color: var(--text-color);
+  width: 100%;
+  margin-top: 32px;
+}
+/* Date */
+.ui-datepicker,
+.ui-datepicker-header,
+.ui-datepicker-week-end,
+.ui-datepicker-calendar,
+.ui-state-default,
+.ui-state-default,
+.ui-widget-content .ui-state-default,
+.ui-widget-header .ui-state-default,
+.ui-button {
+  background: var(--background-body);
+  border: 1px solid #111111;
+}
+
+html .ui-button.ui-state-disabled:hover,
+html .ui-button.ui-state-disabled:active {
+  border: 1px solid #1a1a1a;
+  background: #b3b3b3;
+  font-weight: normal;
+  color: #a3a3a3;
+}
+.ui-datepicker-next.ui-corner-all:hover,
+.ui-datepicker-prev.ui-corner-all:hover {
+  background-color: #161616;
+
+  border-color: #161616;
+
+  color: #fff;
+}
+.ui-state-default,
+.ui-widget-content .ui-state-default,
+.ui-widget-header .ui-state-default,
+.ui-button,
+html .ui-button.ui-state-disabled:hover,
+html .ui-button.ui-state-disabled:active {
+  border: 1px solid #5f5f5f;
+  background: #161616;
+  font-weight: normal;
+  color: var(--fill-icon);
+}
+.ui-datepicker-title,
+td,
+tr,
+tbody,
+.ui-datepicker-calendar,
+.ui-state-default {
+  background: #161616;
+  color: var(--fill-icon);
+
+  border-color: #5e5e5e;
+}
+.ui-datepicker.ui-widget.ui-widget-content.ui-helper-clearfix.ui-corner-all,
+.ui-datepicker-title,
+.ui-datepicker-header.ui-widget-header.ui-helper-clearfix.ui-corner-all,
+.ui-datepicker-header.ui-widget-header.ui-helper-clearfix.ui-corner-all {
+  background: #161616;
+  color: var(--fill-icon);
+
+  border-color: #5e5e5e;
+}
+.ui-datepicker-next.ui-corner-all:focus,
+.ui-datepicker-prev.ui-corner-all:focus {
+  outline: none;
+
+  box-shadow: 0 0 0 3px rgba(156, 39, 176, 0.5);
+}
+/* Date */
+@media (max-width: 768px) {
+  .mechanic.section {
+    padding: 130px 10px 30px 10px;
   }
-  .mechanic .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
+
   .mechanic .title {
-    font-size: 64px;
-    font-weight: 600;
-    line-height: 100.8px;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+    font-size: calc((100vw - 480px) / (768 - 480) * (88 - 64) + 55px);
   }
   .mechanic .text {
-    width: 540px;
-    text-align: center;
-    margin-top: 11px;
+    font-size: calc((100vw - 480px) / (768 - 480) * (20 - 15) + 15px);
+    width: 100%;
   }
   .mechanic .sub-title {
-    font-size: 15.5px;
-    font-weight: 600;
-    line-height: 16px;
+    font-size: calc((100vw - 480px) / (768 - 480) * (20 - 15) + 15px);
+    width: 100%;
     text-align: left;
-    margin-top: 43px;
-    width: 428px;
   }
   .mechanic .form-mechanic-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 11px;
-    width: 428px;
-    margin-top: 21px;
-  }
-  .mechanic .form-mechanic-form .textarea {
-    height: 90px;
-    padding: 15px 10px;
-  }
-  .mechanic .form-mechanic-form .btn {
-    background: var(--fill-icon);
-    color: var(--text-color);
     width: 100%;
-    margin-top: 32px;
   }
-  
-  @media (max-width: 768px) {
-    .mechanic.section {
-      padding: 130px 10px 30px 10px;
-    }
-  
-    .mechanic .title {
-      font-size: calc((100vw - 480px) / (768 - 480) * (88 - 64) + 55px);
-    }
-    .mechanic .text {
-      font-size: calc((100vw - 480px) / (768 - 480) * (20 - 15) + 15px);
-      width: 100%;
-    }
-    .mechanic .sub-title {
-      font-size: calc((100vw - 480px) / (768 - 480) * (20 - 15) + 15px);
-      width: 100%;
-      text-align: left;
-    }
-    .mechanic .form-mechanic-form {
-      width: 100%;
-    }
-  }
-  
+}
