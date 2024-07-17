@@ -1,7 +1,7 @@
 {% for el in about_company %}
 <section class="company-info section">
   <div class="container">
-    <h2 class="title">{{ el.company_title }}</h2>
+    <h2 class="title">{{ el.Company_title }}</h2>
 
     <iframe
       class="company-iframe"
@@ -14,17 +14,15 @@
       referrerpolicy="strict-origin-when-cross-origin"
       allowfullscreen
     ></iframe>
-{% endfor %}
+    {% endfor %}
     <ul class="company-info-list">
       {% for el in card_map %}
       <li class="company-info-item">
         <div class="company-wrap-item">
           <h3 class="title">{{ el.card_title }}</h3>
           <p class="text">
-            <span class="company-info-note"
-              >{{el.card_text}}</span
-            >
-                   </p>
+            <span class="company-info-note">{{el.card_text}}</span>
+          </p>
         </div>
         <div class="company-wrap-iframe">
           <iframe
@@ -37,26 +35,24 @@
           ></iframe>
         </div>
       </li>
-   {% endfor %}
+      {% endfor %}
     </ul>
   </div>
   {% for el in about_info %}
 
   <style>
     .company-info-btn-wrap {
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url('{{ el.info_background_img.url }}');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
+      background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url("{{ el.info_background_img.url }}");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
   </style>
   <div class="company-info-btn-wrap">
     <div class="container">
       <h3 class="title">{{ el.info_title }}</h3>
-      <a class="btn" href="{% url 'contact' %}">
-        Contact us
-      </a>
+      <a class="btn" href="{% url 'contact' %}"> Contact us </a>
     </div>
   </div>
   {% endfor %}

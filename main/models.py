@@ -5,7 +5,7 @@ from django.core.files.storage import default_storage
 from django.db.models.signals import pre_save
 from django.dispatch import receiver
 from django.core.exceptions import ValidationError
-
+from django.core.exceptions import ObjectDoesNotExist
 class ImageModel(models.Model):
     class Meta:
         abstract = True
@@ -21,15 +21,17 @@ class ImageModel(models.Model):
 
 @receiver(pre_save)
 def delete_old_image(sender, instance, **kwargs):
-    if instance.pk:
-        old_instance = sender.objects.get(pk=instance.pk)
-        for field in instance._meta.fields:
-            if isinstance(field, models.ImageField):
-                old_image_field = getattr(old_instance, field.name)
-                new_image_field = getattr(instance, field.name)
-                if old_image_field and old_image_field != new_image_field:
-                    old_image_field.delete(save=False)
-
+    try:
+        if instance.pk:
+            old_instance = sender.objects.get(pk=instance.pk)
+            for field in instance._meta.fields:
+                if isinstance(field, models.ImageField):
+                    old_image_field = getattr(old_instance, field.name)
+                    new_image_field = getattr(instance, field.name)
+                    if old_image_field and old_image_field != new_image_field:
+                        old_image_field.delete(save=False)
+    except ObjectDoesNotExist:
+        pass  # Handle the case where the instance does not exist anymore
 
 def hash_file_content(file):
     hasher = hashlib.sha256()

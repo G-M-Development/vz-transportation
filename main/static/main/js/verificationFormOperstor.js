@@ -1,5 +1,5 @@
-import { URL_API } from "./config";
 export default (() => {
+  const URL_API = "https://api.3rdparty.com";
   const form = document.getElementById("form-operator");
 
   form.addEventListener("submit", function (event) {
@@ -24,7 +24,8 @@ export default (() => {
     }
 
     const phoneInput = document.getElementById("phone");
-    const telPattern = /\b(?:(?:\+1[-.\s]?)|(?:1[-.\s]?))?\(?\d{3}\)?[-.\s]?\d{3}[-.\s]?\d{4}\b/;
+    const telPattern =
+      /\b(?:(?:\+1[-.\s]?)|(?:1[-.\s]?))?\(?\d{3}\)?[-.\s]?\d{3}[-.\s]?\d{4}\b/;
     if (!telPattern.test(phoneInput.value)) {
       phoneInput.classList.add("error");
       isValid = false;
@@ -56,7 +57,9 @@ export default (() => {
       experienceInput.classList.remove("error");
     }
 
-    const checkedElement = document.querySelector('input[name="truck"]:checked');
+    const checkedElement = document.querySelector(
+      'input[name="truck"]:checked'
+    );
     const allTruckInputs = document.querySelectorAll('input[type="radio"]');
     if (!checkedElement) {
       isValid = false;

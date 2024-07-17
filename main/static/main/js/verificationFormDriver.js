@@ -1,6 +1,5 @@
-import { URL_API } from "./config";
-
 export default (() => {
+  const URL_API = "https://api.3rdparty.com";
   const form = document.getElementById("form-drivers");
   form.addEventListener("submit", function (event) {
     event.preventDefault();
@@ -25,7 +24,8 @@ export default (() => {
 
     const phoneInput = document.getElementById("tel");
 
-    const telPattern = /\b(?:(?:\+1[-.\s]?)|(?:1[-.\s]?))?\(?\d{3}\)?[-.\s]?\d{3}[-.\s]?\d{4}\b/;
+    const telPattern =
+      /\b(?:(?:\+1[-.\s]?)|(?:1[-.\s]?))?\(?\d{3}\)?[-.\s]?\d{3}[-.\s]?\d{4}\b/;
     if (!telPattern.test(phoneInput.value)) {
       phoneInput.classList.add("error");
       isValid = false;

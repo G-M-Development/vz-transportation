@@ -1,5 +1,6 @@
 import os
 import hashlib
+import django
 from django.db import models
 from django.core.files.storage import default_storage
 from django.db.models.signals import pre_save
@@ -19,16 +20,24 @@ class ImageModel(models.Model):
         super().delete(*args, **kwargs)
 
 
-@receiver(pre_save)
 def delete_old_image(sender, instance, **kwargs):
     if instance.pk:
-        old_instance = sender.objects.get(pk=instance.pk)
-        for field in instance._meta.fields:
-            if isinstance(field, models.ImageField):
-                old_image_field = getattr(old_instance, field.name)
-                new_image_field = getattr(instance, field.name)
-                if old_image_field and old_image_field != new_image_field:
-                    old_image_field.delete(save=False)
+        print(instance.pk)
+        print(sender)
+        
+        # Fetch the model class associated with sender
+        model_class = sender
+        
+        try:
+            old_instance = model_class.objects.get(pk=instance.pk)
+            for field in instance._meta.fields:
+                if isinstance(field, models.ImageField):
+                    old_image_field = getattr(old_instance, field.name)
+                    new_image_field = getattr(instance, field.name)
+                    if old_image_field and old_image_field != new_image_field:
+                        old_image_field.delete(save=False)
+        except model_class.DoesNotExist:
+            pass  
 
 
 def hash_file_content(file):

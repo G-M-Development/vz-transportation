@@ -1,139 +1,138 @@
 .brokerage.section.container {
-    padding: 0 23px;
+  padding: 0 23px;
+}
+.brokerage .title {
+  font-size: 56px;
+  margin-top: 16px;
+}
+.brokerage-text {
+  font-size: 24px;
+  font-weight: 400;
+  text-align: left;
+  width: 615px;
+  margin-top: 16px;
+}
+#track-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+}
+.brokerage-track {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 17px;
+  row-gap: 28px;
+  margin-top: 43px;
+}
+
+.brokerage-track-progress {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: space-between;
+}
+
+.brokerage-track-progress-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
+  gap: 39px;
+}
+.brokerage-track-title {
+  font-size: 32px;
+  font-weight: 500;
+  text-align: left;
+  color: var(--text-color);
+}
+.brokerage-track-list {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: start;
+  gap: 54px;
+}
+.brokerage-track-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  height: 100%;
+  width: 60px;
+}
+.brokerage-track-icon {
+  fill: var(--fill-icon);
+}
+.brokerage-track-text {
+  font-size: 14px;
+  font-weight: 500;
+  text-align: center;
+  color: var(--text-color);
+}
+.brokerage-track-progress-bar {
+  position: relative;
+  display: flex;
+  width: 240px;
+  gap: 14px;
+}
+.brokerage-track-progress-text {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 38.4px;
+  text-align: left;
+  color: var(--text-color);
+}
+.brokerage-track-sub-icon {
+  position: absolute;
+  right: 40px;
+  top: -20px;
+  fill: var(--fill-icon);
+}
+.btn {
+  padding: 17px 83px;
+  margin-top: 24px;
+}
+@media (max-width: 768px) {
+  .brokerage.section .container {
+    padding: 100px 10px 23px 10px;
   }
+
   .brokerage .title {
-    font-size: 56px;
-    margin-top: 16px;
+    font-size: calc((100vw - 480px) / (1280 - 480) * (86 - 56) + 56px);
   }
   .brokerage-text {
-    font-size: 24px;
-    font-weight: 400;
-    text-align: left;
-    width: 615px;
-    margin-top: 16px;
-  }
-  #track-wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 24px;
+    width: 100%;
+    font-size: calc((100vw - 480px) / (1280 - 480) * (36 - 24) + 24px);
   }
   .brokerage-track {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    column-gap: 17px;
-    row-gap: 28px;
-    margin-top: 43px;
-  }
-  
-  .brokerage-track-progress {
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    justify-content: space-between;
-  }
-  
-  .brokerage-track-progress-wrap {
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    justify-content: start;
-    gap: 39px;
-  }
-  .brokerage-track-title {
-    font-size: 32px;
-    font-weight: 500;
-    text-align: left;
-    color: var(--text-color);
+    grid-template-columns: repeat(1, 1fr);
   }
   .brokerage-track-list {
     display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: start;
-    gap: 54px;
-  }
-  .brokerage-track-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    gap: 20px;
     justify-content: space-between;
-    gap: 10px;
-    height: 100%;
-    width: 60px;
   }
-  .brokerage-track-icon {
-    fill: var(--fill-icon);
-  }
-  .brokerage-track-text {
-    font-size: 14px;
-    font-weight: 500;
-    text-align: center;
-    color: var(--text-color);
-  }
-  .brokerage-track-progress-bar {
-    position: relative;
-    display: flex;
-   width: 240px;
-    gap: 14px;
-  }
-  .brokerage-track-progress-text {
-    font-size: 32px;
-    font-weight: 700;
-    line-height: 38.4px;
-    text-align: left;
-    color: var(--text-color);
+  .brokerage-track-progress {
+    gap: 30px;
   }
   .brokerage-track-sub-icon {
     position: absolute;
-    right: 40px;
+    right: 90px;
     top: -20px;
     fill: var(--fill-icon);
   }
-  .btn {
-    padding: 17px 83px;
-    margin-top: 24px;
+  .brokerage-track-icon {
+    width: 40px;
+    height: 40px;
   }
-  @media (max-width: 768px) {
-    .brokerage.section .container {
-      padding: 100px 10px 23px 10px;
-    }
-  
-    .brokerage .title {
-      font-size: calc((100vw - 480px) / (1280 - 480) * (86 - 56) + 56px);
-    }
-    .brokerage-text {
-      width: 100%;
-      font-size: calc((100vw - 480px) / (1280 - 480) * (36 - 24) + 24px);
-    }
-    .brokerage-track {
-      grid-template-columns: repeat(1, 1fr);
-    }
-    .brokerage-track-list {
-      display: flex;
-      gap: 20px;
-      justify-content: space-between;
-    }
-    .brokerage-track-progress {
-      gap: 30px;
-    }
-    .brokerage-track-sub-icon {
-      position: absolute;
-      right: 90px;
-      top: -20px;
-      fill: var(--fill-icon);
-    }
-    .brokerage-track-icon {
-      width: 40px;
-      height: 40px;
-    }
-  
-    .brokerage-track-title {
-      font-size: calc((100vw - 480px) / (1280 - 480) * (68 - 32) + 32px);
-    }
-    .brokerage-track-text {
-      font-size: calc((100vw - 480px) / (1280 - 480) * (20 - 14) + 14px);
-    }
+
+  .brokerage-track-title {
+    font-size: calc((100vw - 480px) / (1280 - 480) * (68 - 32) + 32px);
   }
-  
+  .brokerage-track-text {
+    font-size: calc((100vw - 480px) / (1280 - 480) * (20 - 14) + 14px);
+  }
+}

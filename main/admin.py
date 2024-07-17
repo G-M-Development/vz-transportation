@@ -4,9 +4,9 @@ from .models import *
 
 admin.site.register(Main)
 class MainAdmin(admin.ModelAdmin):
-    list_display = ('main_title',)  # Основні поля для відображення в списку
-    search_fields = ('main_title',)  # Пошук за назвою
+    list_display = ('main_title',) 
+    search_fields = ('main_title',)  
 admin.site.register(Driver)
 class DriverAdmin(admin.ModelAdmin):
-    list_display = ('name', 'license_number')  # Основні поля для відображення в списку
+    list_display = ('name', 'license_number')  
     search_fields = ('name', 'license_number') 
